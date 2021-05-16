@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import styles from "../styles/Home.module.css";
+import InsertSort from "./components/InsertSort";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>알고리즘 비주얼라이즈 시각화 앱</h1>
+        <InsertSort />
       </main>
     </div>
   );

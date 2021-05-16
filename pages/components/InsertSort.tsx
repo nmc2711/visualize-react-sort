@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { range, shuffle } from "lodash";
+
 const getArr = () => shuffle(range(1, 11));
+
 function InsertSort() {
-  const arr = getArr();
+  const [arr, setArr] = useState(getArr());
+
+  const handleSuffle = () => {
+    setArr(getArr());
+  };
 
   return (
     <Wrap>
       <div className="board">{arr.join(",")}</div>
       <BtnContainer>
-        <button>셔플</button>
+        <button onClick={handleSuffle}>셔플</button>
         <button>정렬</button>
       </BtnContainer>
     </Wrap>
